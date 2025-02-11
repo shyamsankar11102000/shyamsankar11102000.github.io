@@ -383,7 +383,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .single-progress-txt h3 {
     width: 10%;
-    color: #a606c3;
+    color: #000000;
     position: relative;
     top: 6px;
     left: 20px;
@@ -403,7 +403,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     margin-bottom: 37px;
 }
 .progress-bar {
-   background: #b636ff;
+   background: #000000;
     border-radius: 3px;
    -webkit-transition: width 1.5s ease-in-out;
    -ms-transition: width 1.5s ease-in-out;
@@ -418,7 +418,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .tooltip > .tooltip-inner {
    background-color: transparent;
    padding: 1px 5px;
-   color: #b636ff;
+   color: #000000;
    font-weight: 500;
    font-size: 12px;
    border-radius: 0;
@@ -477,7 +477,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .timeline-content span>i, .experience-time span>i {
-    color: #d92cf9;
+    color: #000000;
     position: absolute;
     font-size: 10px;
     left: -14.5%;
@@ -714,8 +714,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     height:50px;
     text-transform:capitalize;
     margin-top: 3px;
-    background: #b636ff;
-    border: 1px solid #b636ff;
+    background: #000000;
+    border: 1px solid #000000;
     cursor:pointer;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
      -webkit-transition: .5s; 
@@ -740,8 +740,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     
 }
 .single-contact-btn:hover{
-    background: #9f00ff;
-    border: 1px solid #9f00ff;
+    background: #000000;
+    border: 1px solid #000000;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
 }
 
@@ -792,7 +792,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transition: .3s;
 }
 .hm-foot-icon ul li>a:hover{
-    color: #b636ff;
+    color: #030303;
 }/*hm-foot-icon*/
 
 .hm-footer-copyright p{
@@ -816,8 +816,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 20px;
     cursor: pointer;
     color: #fff;
-    background:#b636ff;
-	border:1px solid #b636ff;
+    background:#000000;
+	border:1px solid #000000;
 	border-radius:50%;
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 
@@ -828,8 +828,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 #scroll-Top  .return-to-top:hover {
     background:#fff;
-    color: #b636ff;
-	border:1px solid #b636ff;
+    color: #000000;
+	border:1px solid #000000;
 }
 
 #scroll-Top  .return-to-top i{
