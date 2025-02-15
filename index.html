@@ -57,45 +57,6 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 		
-		<!-- top-area Start -->
-		<header class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
-
-			        <div class="container">
-
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">Shyam</a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
-
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                <li class=" smooth-menu active"></li>
-			                    <li class=" smooth-menu"><a href="#education">education</a></li>
-			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
-			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
-			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
-			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-			                    <li class="smooth-menu"><a href="#clients">clients</a></li>
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
-
-		    <div class="clearfix"></div>
-
-		</header><!-- /.top-area-->
-		<!-- top-area End -->
 	
 		<!--welcome-hero start -->
 		<section id="welcome-hero" class="welcome-hero">
@@ -103,14 +64,16 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="header-text">
-							<h2>hi <span>,</span> i am <br>Shyam Sankar <span>.</span>   </h2>
+							<h2>hi <span>,</span> i am <br>Shyam Sankar. <span>.</span>   </h2>
 							<div class="input-wrapper">
 								<span
 								class="txt-rotate"
 								data-period="2000"
 								data-rotate='[ "Computer Engineer", "Business Intelligence Engineer", "Data Scientist", "Web Developer"]'></span>
 							</div><br>
-							<a href="https://github.com/shyamsankar11102000/Resume/blob/main/ResumeLatest.pdf">resume</a>
+							<div class="resume-button" onclick="window.open('https://github.com/shyamsankar11102000/Resume/blob/main/ResumeLatest.pdf', '_blank')">
+								Resume
+							  </div>							  
 						</div><!--/.header-text-->
 					</div><!--/.col-->
 				</div><!-- /.row-->
@@ -118,6 +81,16 @@
 
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
+		
+
+			<div class="et-hero-tabs-container">
+			  <a class="et-hero-tab" href="#education">Education</a>
+			  <a class="et-hero-tab" href="#skills">Skills</a>
+			  <a class="et-hero-tab" href="#experience">Experience</a>
+			  <a class="et-hero-tab" href="#contact">Contact</a>
+			  <span class="et-hero-tab-slider"></span>
+			</div>
+
 
 		<!--about start -->
 		<section id="about" class="about">
@@ -168,6 +141,7 @@
 		<!--about end -->
 		
 		<!--education start -->
+
 		<section id="education" class="education">
 			<div class="section-heading text-center">
 				<h2>education</h2>
@@ -227,6 +201,7 @@
 			</div>
 
 		</section><!--/.education-->
+
 		<!--education end -->
 
 		<!--skills start -->
@@ -361,6 +336,7 @@
 				</div><!-- /.skill-content-->
 
 		</section><!--/.skills-->
+
 		<!--skills end -->
 
 		<!--experience start -->
@@ -450,6 +426,7 @@
 			</div>
 
 		</section><!--/.experience-->
+
 		<!--experience end -->
 
 		
@@ -525,6 +502,7 @@
 <!--portfolio end -->
 		
 		<!--contact start -->
+
 		<section id="contact" class="contact">
 			<div class="section-heading text-center">
 				<h2>contact me</h2>
@@ -611,6 +589,7 @@
 			</div><!--/.container-->
 
 		</section><!--/.contact-->
+
 		<!--contact end -->
 
 		<!--footer-copyright start-->
@@ -737,3 +716,109 @@ window.onload = function() {
         font-size: 20px; /* Adjust the size as needed */
     }
 </style>
+<script>
+class DynamicSlider {
+    constructor() {
+        this.currentId = null;
+        this.currentTab = null;
+        this.tabContainerHeight = 70;
+        this.tabs = $('.et-hero-tab');
+        this.slider = $('.et-hero-tab-slider');
+        
+        // Listen for tab clicks
+        this.tabs.click((event) => { 
+            this.onTabClick(event, $(event.currentTarget)); 
+        });
+
+        // Listen for scroll events
+        $(window).scroll(() => { this.onScroll(); });
+
+        // Listen for window resize
+        $(window).resize(() => { this.onResize(); });
+
+        // Initialize the slider on page load
+        this.setSliderCss();
+    }
+
+    // Handle tab clicks
+    onTabClick(event, element) {
+        event.preventDefault();
+        
+        // Remove active class from all tabs
+        this.tabs.removeClass('active');
+        
+        // Add active class to the clicked tab
+        element.addClass('active');
+        
+        // Scroll to the target section
+        let targetId = element.attr('href');
+        let scrollTop = $(targetId).offset().top - this.tabContainerHeight + 1;
+        
+        // Smoothly scroll to the target section
+        $('html, body').animate({ scrollTop: scrollTop }, 600);
+    }
+
+    // Update slider position on scroll
+    onScroll() {
+        this.findCurrentTab();
+        this.setSliderCss();
+    }
+
+    // Update slider width and position on window resize
+    onResize() {
+        this.setSliderCss();
+    }
+
+    // Find which tab corresponds to the current section based on scroll position
+    findCurrentTab() {
+        let newCurrentId = null;
+        let newCurrentTab = null;
+        
+        this.tabs.each((index, tab) => {
+            let targetId = $(tab).attr('href');
+            let offsetTop = $(targetId).offset().top - this.tabContainerHeight;
+            let offsetBottom = $(targetId).offset().top + $(targetId).height() - this.tabContainerHeight;
+            
+            if ($(window).scrollTop() >= offsetTop && $(window).scrollTop() < offsetBottom) {
+                newCurrentId = targetId;
+                newCurrentTab = $(tab);
+            }
+        });
+
+        // If the active tab has changed, update the slider position
+        if (this.currentId !== newCurrentId) {
+            this.currentId = newCurrentId;
+            this.currentTab = newCurrentTab;
+            this.setSliderCss();
+            
+            // Remove active class from all tabs and add it to the current tab
+            this.tabs.removeClass('active');
+            if (this.currentTab) {
+                this.currentTab.addClass('active');
+            }
+        }
+    }
+
+    // Update the slider's position and width based on the current tab
+    setSliderCss() {
+        let width = 0;
+        let left = 0;
+
+        // If there's a current active tab, calculate the slider's position and width
+        if (this.currentTab) {
+            width = this.currentTab.outerWidth();  // Get full width of the tab including padding
+            left = this.currentTab.offset().left;  // Get the tab's left position
+        }
+
+        // Apply the calculated values to the slider
+        this.slider.css({
+            'width': width,
+            'left': left
+        });
+    }
+}
+
+// Initialize the DynamicSlider class
+new DynamicSlider();
+
+</script>
