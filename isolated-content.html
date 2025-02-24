@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <!-- Material Design Lite (MDL) CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <style>
+    /* Vertical Tabs */
+    .mdl-tabs__panel {
+      display: none;
+    }
+    .vertical-mdl-tabs {
+      margin-top: 30px;
+    }
+    .vertical-mdl-tabs .mdl-tabs__tab-bar {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-bottom: 35px;
+      height: inherit;
+      border-bottom: none;
+      border-right: 1px solid rgba(10, 11, 49, 0.20);
+    }
+
+    .vertical-mdl-tabs .mdl-tabs__tab {
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      box-sizing: border-box;
+      letter-spacing: 2px;
+    }
+
+    .vertical-mdl-tabs .mdl-tabs__tab:hover {
+      background: rgba(158, 158, 158, 0.34);
+      color: black;
+    }
+
+    .vertical-mdl-tabs.mdl-tabs.is-upgraded a.mdl-tabs__tab.is-active {
+      border-right: 3px solid #000000;
+    }
+
+    .vertical-mdl-tabs.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+      content: inherit;
+      height: 0;
+    }
+
+    .vertical-mdl-tabs.mdl-tabs.is-upgraded .mdl-tabs__panel.is-active, .mdl-tabs__panel {
+      padding: 0 30px;
+    }
+
+    .vertical-mdl-tabs.mdl-tabs .mdl-tabs__tab {
+      text-align: left;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+      color: #000000;
+    }
+    body{
+	font-family: 'Poppins', sans-serif;
+	font-size:16px;
+	color: #676a81;
+	background: #fff;
+    max-width:1920px;
+    margin:0 auto;
+	overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6 { 
+	margin: 0;
+	color:#43485c;
+    font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	text-transform: capitalize;
+
+}
+  </style>
+</head>
+<body>
+
+    <h4 class="text-center" style="color: #292929; font-weight: bold;  padding-bottom: 40px; margin-bottom: 20px; border-bottom: 1px solid lightgrey;">PROJECTS</h4>
+  <div class="mdl-tabs vertical-mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-grid mdl-grid--no-spacing">
+      <div class="mdl-cell mdl-cell--2-col">
+        <div class="mdl-tabs__tab-bar">
+          <a href="#tab1-panel" class="mdl-tabs__tab is-active">
+            <span class="hollow-circle"></span>
+            Machine Learning
+          </a>
+          <a href="#tab2-panel" class="mdl-tabs__tab">
+            <span class="hollow-circle"></span>
+            Software Engineering
+          </a>
+          <a href="#tab3-panel" class="mdl-tabs__tab">
+            <span class="hollow-circle"></span>
+            Data Science
+          </a>
+          
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--10-col">
+        <!-- Machine Learning Projects -->
+        <div class="mdl-tabs__panel is-active" id="tab1-panel">
+          <h5>Multi-modal Calorie Estimator from CGM and Image Data</h5>
+          <p>This project develops a multi-modal machine learning model to improve dietary intake monitoring for individuals with diabetes. It integrates three datasets: time-series data from a continuous glucose monitor (CGM), health and demographic information, and meal images. The model includes three components: an image model using a pre-trained ResNet-50 to extract features from meal images, an LSTM-based model to capture temporal patterns in CGM data, and a fully connected neural network for health data. These components are combined into a multi-modal calorie predictor. The model’s performance is evaluated with a testing Root Mean Squared Relative Error (RMSRE) of 0.34, showing a significant improvement of 0.18 over the benchmark. This approach automates dietary intake tracking, helping manage blood sugar levels and prevent cardiovascular diseases in diabetic individuals.</p>
+          <a href="https://github.com/shyamsankar11102000/CalorieEstimator" target="_blank">Project</a> ||
+          <a href="https://github.com/shyamsankar11102000/CalorieEstimator/blob/main/CalorieEstimatorReport.pdf" target="_blank">report</a>
+        
+          <h5>Archaeological Predictive Model - Decision trees and logistic regression</h5>
+          <p>This project compares two pattern recognition techniques—logistic regression and decision trees—by implementing Archaeological Predictive Models (APM) using datasets from two distinct regions: Upper Galilee in northern Israel and Fuxin in northeast China. The goal is to assess the effectiveness of each model in predicting archaeological sites based on environmental features like proximity to water, slope, and elevation, which influenced ancient settlement patterns. In the Galilee, features like distance to springs and land curvature were key, while in Fuxin, proximity to rivers, crops, and elevation played a crucial role. The decision tree model outperformed logistic regression in most evaluation metrics, achieving 83% classification accuracy and a higher precision of 0.64, compared to logistic regression's performance. The Area Under the Curve (AUC) for the decision tree model was 0.84, demonstrating its effectiveness in spatial prediction. However, the model's generalization could improve with more data from different regions.</p>
+          <a href="https://github.com/shyamsankar11102000/Archaeological-Predictive-Model-" target="_blank">Project</a> ||
+          <a href="https://github.com/shyamsankar11102000/Archaeological-Predictive-Model-/blob/main/Archaeological_Predictive_Model.pdf" target="_blank">report</a>
+        
+          <h5>Predictive Analysis of Alzheimer’s Disease using AlexNET CNN Model</h5>
+          <p>Developed an end-to-end machine learning model for accurate classification of 2D MRI brain images into levels predicting presence and progression of the disease, incorporating segmentation, noise removal, and feature extraction with Gabor Filters. Notably, the utilization of AlexNet’s Convolutional Neural Network further refined the model’s capacity, achieving impressive accuracy despite limited data and computational resources.</p>
+
+          
+          
+        </div>
+
+        <!-- Web Development Projects -->
+        <div class="mdl-tabs__panel" id="tab2-panel">
+          <h5>AI enabled B2B Invoice Management Cloud Application</h5>
+          <p>This project focused on developing a comprehensive B2B invoice management application, including two interactive dashboards and multiple account setups for efficient invoice processing. The frontend UI was designed using the ExtJS framework, which enabled the creation of intuitive forms and interactive elements. Text fields, such as 'Client Name' and 'Client ID,' were created using the Ext.form.field.Text component, while a date field for 'Invoice Date' was implemented using Ext.form.field.Date, which recognized and formatted the date according to the user’s locale. The application's backend utilized JSP/Servlets, Struts, and Spring frameworks. Servlets were used to manage data interactions with the frontend, handling CRUD operations (Create, Read, Update, Delete) through AJAX calls. A model class was created to manage database connections and ensure seamless data exchange. Struts2 was implemented for the MVC architecture, where action classes processed user requests and returned responses. The struts.xml file was configured for URL-action mapping, streamlining the flow of requests. Incorporating Spring into the project allowed for more efficient handling of business logic and data access. Spring Beans were utilized for dependency injection, facilitating easier testing and enhancing modularity. DAO (Data Access Object) and Manager classes were implemented to interact with the database and manage business operations, ensuring data consistency and performance. This project demonstrated an end-to-end solution for invoice management, combining user-friendly UI, robust backend frameworks, and efficient data handling to streamline business processes.</p>
+          <a href="https://github.com/shyamsankar11102000/InvoiceMgmtAppReport/blob/main/RA1811003010327_Project%20Report.pdf" target="_blank">Report</a>
+
+          
+        </div>
+
+        <!-- Data Science Projects -->
+        <div class="mdl-tabs__panel" id="tab3-panel">
+            <h5> Visualising the correlation of contagious disease spread and population density</h5>
+            <p>Analysed early COVID data and census data from Chinese provinces, investigating the relationship between population density and the spread of contagious diseases. Implemented a K-Means clustering model to classify global cities into risk-assigned clusters based on this data. Subsequently, developed a comprehensive Tableau report to visualise and communicate the findings effectively.</p>
+            <a href="https://github.com/shyamsankar11102000/Corona_Virus_Analysis/tree/master" target="_blank">Project</a> ||
+            <a href="https://github.com/shyamsankar11102000/Corona_Virus_Analysis/blob/master/DATA%20VISUALIZATION%20AND%20ANALYSIS%20OF%20THE%20EFFECTS%20OF%20CORONAVIRUS%20IN%20CHINA%20(1).pdf" target="_blank">report</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Material Design Lite (MDL) JavaScript -->
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+</html>
